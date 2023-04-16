@@ -1,0 +1,89 @@
+.field-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  .field-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition: box-shadow ease-in-out .15s, border-color ease-in-out .15s;
+    transition: box-shadow ease-in-out .15s, border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  }
+  
+  .form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+  }
+  
+  .field-errors {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .notification {
+    position: absolute;
+    bottom: 50px;
+    left: 400px;
+    width: 150px;
+    padding: 20px 15px;
+    border-radius: 4px;
+    background-color: #8caad6;
+    color: azure;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(30px);
+    opacity: 0;
+    visibility: visible;
+    animation: fade-in 4s linear forwards;
+  }
+  
+  .notification-progress {
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    width: calc(100% - 10px);
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-image: linear-gradient(to right, #202a33, #3250bf);
+    border-radius: inherit;
+    animation: load 3s 0.25s linear forwards;
+  }
+  
+  @keyframes fade-in {
+    5% {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    90% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes load {
+    to {
+      transform: scaleX(1);
+    }
+  }

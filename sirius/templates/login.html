@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"   type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/sir.png') }}" >
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <title>Login-page</title>
+    
+</head>
+<body>
+    
+    <div class="container" >
+        {% include 'includes/_messages.html' %} 
+        <div class="img">
+			<img src="{{ url_for('static', filename='img/login.svg') }}" >
+		</div>
+        <div class="login-content">
+         <form action="" method="POST">
+            <img src="{{ url_for('static', filename='img/mobile.svg') }}">
+                <h2 class="title">Welcome Back </h2>
+                  <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                     <div class="div">
+                        
+                            <input type="text" id="inputUsername" name="username" placeholder="Username"  required="required" autofocus="autofocus" value={{request.form.username}}>
+                        </div> 
+                  </div> 
+        
+            <div class="input-div pass">
+                <div class="i"> 
+                    <i class="fas fa-lock"></i>
+               </div>
+                   <div class="div">
+                    
+                        <input type="password" id="inputPassword" name="password" placeholder="Password" required="required" autofocus="autofocus" value={{request.form.password}}>
+                </div>
+            </div>
+            <div>
+                
+                <a href="{{ url_for('dashboard') }}"><button type="submit" class="btn " >Login</a></button>
+                <button type="reset" class="btn ">Cancel</button>
+                <a  class="new" href="{{ url_for('register') }}">If New, Join US!</a>
+            </div>
+             
+         </form>
+        </div>
+    </div>
+</body>
+</html>

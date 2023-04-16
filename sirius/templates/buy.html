@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/buy.css') }}" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/sir.png') }}" >
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">  
+    <title>Buy SRS</title>
+</head>
+<body>
+    {% include 'includes/_messages.html' %}
+    
+
+{% from "includes/_formhelpers.html" import render_field %}
+<form action="" method="POST">
+  <div class="form-group">
+    
+      <p>Your current balance is {{ balance }} SRS</p>
+      <div class="from-group">
+        <div class="i">
+          <i class="fas fa-money-bill"></i>
+      {{render_field(form.amount, class_="form-control")}}
+    </div>
+  </div>
+  <button type="submit" class="btn">Buy Now</button>
+</div>
+</form>
+</body>
+</html>
