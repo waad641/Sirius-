@@ -7,13 +7,6 @@ class InsufficientFundsException(Exception): pass
 
 #what a mysql table looks like. Simplifies access to the database 'crypto'
 class Table():
-    #specify the table name and columns
-    #EXAMPLE table:
-    #               blockchain
-    # number    hash    previous   data    nonce
-    # -data-   -data-    -data-   -data-  -data-
-    #
-    #EXAMPLE initialization: ...Table("blockchain", "number", "hash", "previous", "data", "nonce")
     def __init__(self, table_name, *args):
         self.table = table_name
         self.columns = "(%s)" %",".join(args)
